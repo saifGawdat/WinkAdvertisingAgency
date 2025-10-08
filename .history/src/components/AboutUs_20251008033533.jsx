@@ -51,7 +51,7 @@ export default function AboutUs() {
       className="relative w-screen h-screen bg-black shadow-2xl flex items-center justify-center overflow-visible !mt-[280px] max-[1050px]:!mt-[200px] max-[400px]:!mt-[100px]"
     >
       <LiquidEther
-        colors={["#6c757d", "#6c757d", "#6c757d"]}
+        colors={["#6c757d", "#6c757d", "#495057"]}
         mouseForce={20}
         cursorSize={100}
         isViscous={false}

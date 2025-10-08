@@ -51,7 +51,7 @@ export default function AboutUs() {
       className="relative w-screen h-screen bg-black shadow-2xl flex items-center justify-center overflow-visible !mt-[280px] max-[1050px]:!mt-[200px] max-[400px]:!mt-[100px]"
     >
       <LiquidEther
-        colors={["#6c757d", "#6c757d", "#6c757d"]}
+        colors={["#fff", "#FffC", "#ffF"]}
         mouseForce={20}
         cursorSize={100}
         isViscous={false}
@@ -82,9 +82,9 @@ export default function AboutUs() {
             About Us
           </h2>
           {aboutData.length > 0 && (
-            <div className="flex flex-col gap-[100px] ">
+            <div className="flex flex-col gap-[100px]">
               <details className="group">
-                <summary className="flex justify-between items-center cursor-pointer list-none text-white p-8 bg-transparent border-b-2 border-white/20 animate-borderGlow text-2xl !overflow-hidden">
+                <summary className="flex justify-between items-center cursor-pointer list-none text-white p-8 bg-transparent border-b-2 border-white/20 animate-borderGlow text-2xl">
                   <span className="font-semibold">{aboutData[0].title}</span>
                   <span className="transform group-open:rotate-180 transition-transform duration-300">
                     ↓
@@ -96,38 +96,40 @@ export default function AboutUs() {
               </details>
 
               <details className="group">
-                <summary className="flex justify-between items-center cursor-pointer list-none text-white p-8 bg-transparent border-b-2 border-white/20 animate-borderGlow text-2xl !overflow-hidden">
+                <summary className="flex justify-between items-center cursor-pointer list-none text-white p-8 bg-transparent border-b-2 border-white/20 animate-borderGlow text-2xl">
                   <span className="font-semibold">{aboutData[1].title}</span>
                   <span className="transform group-open:rotate-180 transition-transform duration-300">
                     ↓
                   </span>
                 </summary>
                 <div className="text-white/80 p-8 bg-transparent animate-slideDown text-xl mt-4">
-                  {aboutData[1].content}
+                  {aboutData[0].content}
                 </div>
               </details>
 
               <details className="group">
-                <summary className="flex justify-between items-center cursor-pointer list-none text-white p-8 bg-transparent border-b-2 border-white/20 animate-borderGlow text-2xl !overflow-hidden">
+                <summary className="flex justify-between items-center cursor-pointer list-none text-white p-8 bg-transparent border-b-2 border-white/20 animate-borderGlow text-2xl">
                   <span className="font-semibold">{aboutData[2].title}</span>
                   <span className="transform group-open:rotate-180 transition-transform duration-300">
                     ↓
                   </span>
                 </summary>
                 <div className="text-white/80 p-8 bg-transparent animate-slideDown text-xl mt-4">
-                  {aboutData[2].content}
+                  Innovation, integrity, and user-centric design are at the core
+                  of everything we do.
                 </div>
               </details>
 
               <details className="group">
-                <summary className="flex justify-between items-center cursor-pointer list-none text-white p-8 bg-transparent border-b-2 border-white/20 animate-borderGlow text-2xl !overflow-hidden">
+                <summary className="flex justify-between items-center cursor-pointer list-none text-white p-8 bg-transparent border-b-2 border-white/20 animate-borderGlow text-2xl">
                   <span className="font-semibold">{aboutData[3].title}</span>
                   <span className="transform group-open:rotate-180 transition-transform duration-300">
                     ↓
                   </span>
                 </summary>
                 <div className="text-white/80 p-8 bg-transparent animate-slideDown text-xl mt-4">
-                  {aboutData[3].content}
+                  We take a collaborative, user-centered approach to create
+                  solutions that make a lasting impact.
                 </div>
               </details>
             </div>
