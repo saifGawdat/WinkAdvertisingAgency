@@ -1,0 +1,69 @@
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+export default function ContactUs() {
+  return (
+    <section
+      id="contactUs"
+      className="w-screen h-screen flex flex-col items-center justify-start relative overflow-hidden"
+    >
+      <h2 className="text-black text-center font-bold text-[32px] md:text-[48px] mt-[5px] overflow-hidden">
+        Contact Us
+      </h2>
+
+      <div className="content flex flex-col md:flex-row items-center justify-between w-full h-full px-10 relative">
+        {/* اليسار: الفورم */}
+        <div className="form w-full md:w-1/2 h-full flex flex-col items-start justify-center mt-4 z-10">
+          <form className="flex flex-col gap-4 w-full max-w-[400px]">
+            <h2 className="font-bold text-black text-[22px] mb-2">
+              Ready to take your business to the next level?
+            </h2>
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="border border-gray-400 p-2 rounded-lg"
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="border border-gray-400 p-2 rounded-lg"
+            />
+            <textarea
+              placeholder="Your Message"
+              className="border border-gray-400 p-2 rounded-lg h-[100px]"
+            ></textarea>
+            <button
+              type="submit"
+              className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-all duration-300"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        {/* اليمين: الصورة والخريطة */}
+        <div className="mapContainer relative w-full md:w-1/2 h-full flex items-center justify-center">
+          <img
+            src="src/assets/map.webp"
+            alt="map background"
+            className="w-full h-full object-cover rounded-2xl"
+          />
+          <div className="absolute top-[10%] left-[10%] shadow-2xl rounded-2xl overflow-hidden border-4 border-white z-20">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d360.2492807446222!2d31.003621890474765!3d30.794555107720722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7c9db8cd31c99%3A0xe5e5e78fba59d364!2sWink%20Agency!5e0!3m2!1sar!2seg!4v1760190049086!5m2!1sar!2seg"
+              width="450"
+              height="300"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              className="rounded-xl"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
