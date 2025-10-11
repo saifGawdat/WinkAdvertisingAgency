@@ -1,0 +1,31 @@
+import { useState, useEffect, useRef } from "react";
+
+/* import your local logos - update paths/names to match your files */
+import logo1 from "../assets/Samir Ghoraba logo.webp";
+import logo2 from "../assets/hydraa.webp";
+import logo3 from "../assets/tap.webp";
+import logo4 from "../assets/Profit.webp";
+import logo5 from "../assets/rashat.webp";
+import logo6 from "../assets/Badawi.webp";
+import logo7 from "../assets/Priceless logo.webp";
+import logo8 from "../assets/elfaye2.webp";
+
+export default function Projects() {
+  const [projects, setProjects] = useState([]);
+  const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8];
+  useEffect(() => {
+    fetch("https://api.example.com/projects") // Replace with your API endpoint
+      .then((response) => response.json())
+      .then((data) => setProjects(data))
+      .catch((error) => console.error("Error fetching projects:", error));
+  }, []);
+
+
+  return (
+    <section
+      id="projects"
+      className="py-24 flex flex-col items-center justify-center relative"
+    >
+    </section>
+  );
+}
