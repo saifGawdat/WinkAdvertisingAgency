@@ -1,0 +1,3 @@
+baseurl="https://winkbackend-production.up.railway.app"
+
+VITE_API_URL=https://your-production-domain.com/api

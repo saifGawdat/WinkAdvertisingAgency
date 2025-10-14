@@ -1,0 +1,3 @@
+baseurl=
+
+VITE_API_URL=https://your-production-domain.com/api
