@@ -80,8 +80,8 @@ export default function Services() {
           >
             <TiltedCard
               className="flex text-center items-center justify-center bg-center rounded-2xl overflow-hidden shadow-lg"
-              captionText={s.title}
               imageSrc={cardBg}
+              captionText={s.title}
               containerHeight="550px"
               containerWidth="100%"
               imageHeight="450px"
@@ -96,8 +96,6 @@ export default function Services() {
                   <img
                     src={s.brandingImage}
                     className="w-[60px] h-[60px] rounded-[15px]"
-                    alt={`${s.name} branding`}
-                    onError={(e) => (e.currentTarget.style.display = "none")}
                   />
                   <h3 className="font-bold text-[24px] sm:text-[30px] text-white text-center">
                     {s.name}
