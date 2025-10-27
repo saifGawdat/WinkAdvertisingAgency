@@ -4,6 +4,7 @@ import cap from "../assets/cap.webp";
 import { useEffect, useRef, useState } from "react"; // Add useState
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+const apiUrl = import.meta.env.VITE_API_URL;
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,7 +12,7 @@ export default function AboutUs() {
   const capRef = useRef(null);
   const [aboutData,setAboutData] = useState([])
   useEffect(()=>{
-    fetch("https://winkbackend-production.up.railway.app/api/about")
+    fetch(`${apiUrl}/api/about`)
       .then((res) => res.json())
       .then((data) => setAboutData(data))
       .catch((error) => console.log("error fetching data:", error));
@@ -48,8 +49,9 @@ export default function AboutUs() {
   return (
     <section
       id="aboutUs"
-      className="relative w-screen h-screen bg-black shadow-2xl flex items-center justify-center overflow-visible !mt-[280px] max-[1050px]:!mt-[200px] max-[400px]:!mt-[100px]"
+      className="relative w-screen h-screen bg-black shadow-2xl flex items-center justify-center overflow-visible !mt-[220px] max-[1050px]:!mt-[200px] max-[400px]:!mt-[100px]"
     >
+      <div className="ligrRiverse"></div>
       <LiquidEther
         colors={["#6c757d", "#6c757d", "#6c757d"]}
         mouseForce={20}

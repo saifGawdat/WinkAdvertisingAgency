@@ -13,7 +13,7 @@ export default function HomePage() {
     // Intro animations
     tl.fromTo(
       textRef.current,
-      { x: -300, opacity: 0 },
+      { x: -200, opacity: 0 },
       { x: 0, opacity: 1, duration: 1.5, ease: "power3.out" }
     )
       .fromTo(
@@ -24,7 +24,7 @@ export default function HomePage() {
       )
       .fromTo(
         imageRef.current,
-        { x: 300, opacity: 0 },
+        { x: 100, opacity: 0 },
         { x: 0, opacity: 1, duration: 1.5, ease: "power3.out" },
         "-=1.2"
       );
@@ -32,7 +32,7 @@ export default function HomePage() {
     // Floating animation (continuous)
     gsap.to(imageRef.current, {
         y: -10,
-        x: -5,
+        x: 0,
       duration: 1.5,
       repeat: -1,
       yoyo: true,
@@ -73,7 +73,7 @@ export default function HomePage() {
         ref={imageRef}
         src="../src/assets/home.webp"
         alt="HomePage"
-        className="w-[90vw] h-[90vh] absolute top-[80px] right-[20px] max-[1050px]:mt-[40px] max-[1050px]:!w-[900px] !overflow-x-hidden"
+        className="w-[90vw] h-[90vh] absolute top-[80px] right-[20px] max-[1050px]:mt-[40px] max-[1050px]:!w-[700px] !overflow-x-hidden"
       />
     </div>
   );
