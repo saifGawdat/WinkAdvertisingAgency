@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 const apiUrl = import.meta.env.VITE_API_URL;
-import bg from "../../public/assets/black-texture-projects.webp";
+import cardBg from "../../public/assets/black-texture-projects.webp";
 
 
 // branding images
@@ -81,7 +81,7 @@ export default function Services() {
             <TiltedCard
               className="flex text-center items-center justify-center bg-center rounded-2xl overflow-hidden shadow-lg"
               captionText={s.title}
-              imageSrc={bg}
+              imageSrc={cardBg}
               containerHeight="550px"
               containerWidth="100%"
               imageHeight="450px"
