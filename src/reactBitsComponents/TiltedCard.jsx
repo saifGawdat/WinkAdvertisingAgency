@@ -10,7 +10,6 @@ const springValues = {
 };
 
 export default function TiltedCard({
-  imageSrc,
   captionText = "",
   containerHeight = "300px",
   containerWidth = "100%",
@@ -108,7 +107,6 @@ export default function TiltedCard({
         }}
       >
         <motion.img
-          src={imageSrc}
           className="absolute top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)]"
           style={{
             width: imageWidth,
