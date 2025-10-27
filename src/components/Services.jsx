@@ -6,12 +6,12 @@ const apiUrl = import.meta.env.VITE_API_URL;
 
 
 // branding images
-import branding1 from "../assets/branding.webp";
-import branding2 from "../assets/coding.webp";
-import branding3 from "../assets/motion-graphics.webp";
-import branding4 from "../assets/video-camera.webp";
-import branding5 from "../assets/ads.webp";
-import branding6 from "../assets/printer.webp";
+import branding1 from "../../public/assets/branding.webp";
+import branding2 from "../../public/assets/coding.webp";
+import branding3 from "../../public/assets/motion-graphics.webp";
+import branding4 from "../../public/assets/video-camera.webp";
+import branding5 from "../../public/assets/ads.webp";
+import branding6 from "../../public/assets/printer.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,7 +80,7 @@ export default function Services() {
             <TiltedCard
               className="flex text-center items-center justify-center bg-center rounded-2xl overflow-hidden shadow-lg"
               captionText={s.title}
-              imageSrc="src/assets/black-texture-projects.webp"
+              imageSrc="../../public/assets/black-texture-projects.webp"
               containerHeight="550px"
               containerWidth="100%"
               imageHeight="450px"

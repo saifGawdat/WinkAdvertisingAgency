@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AboutUs from "./AboutUs";
+import logoImg from "../../public/assets/white logo cropped2.png"
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
@@ -12,7 +13,7 @@ export default function Nav() {
       >
         <img
           className="w-[110px]"
-          src="/src/assets/white logo cropped2.webp"
+          src={logoImg}
           alt="logo"
         />
         <ul

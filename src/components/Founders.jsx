@@ -2,6 +2,8 @@ import LiquidEther from "../reactBitsComponents/LiquidEther";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import founder1 from "../../public/cards/1.webp"
+import founder2 from "../../public/cards/2.webp"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,7 +79,7 @@ export default function Founders() {
             <div className="flex flex-col items-center text-white gap-4">
               <img
                 className="w-64 h-64 sm:w-80 sm:h-80 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] rounded-lg object-cover shadow-2xl"
-                src="../public/cards/1.webp"
+                src={founder1}
                 alt="Ebrahim Zaid"
               />
               <h3 className="text-2xl sm:text-3xl font-bold">Ebrahim Zaid</h3>
@@ -88,7 +90,7 @@ export default function Founders() {
             <div className="flex flex-col items-center text-white gap-4">
               <img
                 className="w-64 h-64 sm:w-80 sm:h-80 md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] rounded-lg object-cover shadow-2xl"
-                src="../public/cards/2.webp"
+                src={founder2}
                 alt="Eslam Yehia"
               />
               <h3 className="text-2xl sm:text-3xl font-bold">Eslam Yehia</h3>

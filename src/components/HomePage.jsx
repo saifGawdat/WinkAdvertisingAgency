@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
+import homeImg from "../../public/assets/home.webp";
 
 
 export default function HomePage() {
@@ -8,7 +9,7 @@ export default function HomePage() {
   const imageRef = useRef(null);
 
     useEffect(() => {
-      document.body.style.overflowY = "hidden";
+    document.body.style.overflowY = "hidden";
     const tl = gsap.timeline();
 
     // Intro animations
@@ -47,7 +48,7 @@ export default function HomePage() {
       className="textSection flex !flex-row items-start lg:!mt-[200px] lg:!mx-[150px]
       max-[1050px]:flex-col max-[1050px]:items-center max-[1050px]:mx-[20px] !overflow-hidden"
     >
-      <div className="flex flex-col items-center w-fit z-10 !overflow-hidden  max-[1024px]:!mt-[200px] max-[500px]:!mt-[100px]">
+      <div className="flex flex-col items-center w-fit z-10 !overflow-hidden  max-[1024px]:!mt-[200px] max-[500px]:!mt-[40px]">
         <h1
           ref={textRef}
           className="text-[70px] leading-tight font-bold text-center 
@@ -72,9 +73,9 @@ export default function HomePage() {
 
       <img
         ref={imageRef}
-        src="../src/assets/home.webp"
+        src={homeImg}
         alt="HomePage"
-        className="w-[90vw] h-[90vh] absolute top-[80px] right-[20px] max-[1050px]:mt-[40px] max-[1050px]:!w-[700px] !overflow-x-hidden"
+        className="w-[90vw] h-[90vh] absolute top-[90px] right-[0px] max-[1050px]:!mt-[50px] max-[1050px]:!w-[700px] !overflow-x-hidden max-[520px]:!mt-[0px]"
       />
     </div>
   );

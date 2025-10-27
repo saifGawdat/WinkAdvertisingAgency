@@ -5,14 +5,14 @@ const apiUrl = import.meta.env.VITE_API_URL;
 
 
 /* import your local logos */
-import logo1 from "../assets/Samir Ghoraba logo.webp";
-import logo2 from "../assets/hydraa.webp";
-import logo3 from "../assets/tap.webp";
-import logo4 from "../assets/Profit.webp";
-import logo5 from "../assets/rashat.webp";
-import logo6 from "../assets/Badawi.webp";
-import logo7 from "../assets/Priceless logo.webp";
-import logo8 from "../assets/elfaye2.webp";
+import logo1 from "../../public/assets/Samir Ghoraba logo.webp";
+import logo2 from "../../public/assets/hydraa.webp";
+import logo3 from "../../public/assets/tap.webp";
+import logo4 from "../../public/assets/Profit.webp";
+import logo5 from "../../public/assets/rashat.webp";
+import logo6 from "../../public/assets/Badawi.webp";
+import logo7 from "../../public/assets/Priceless logo.webp";
+import logo8 from "../../public/assets/elfaye2.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,7 +97,7 @@ export default function Projects() {
         </button>
 
         {/* Project Slide */}
-        <div className="bg-white text-black rounded-2xl shadow-lg w-full flex flex-col  transition-all duration-500 relative p-6">
+        <div className="bg-white text-black rounded-2xl shadow-lg  flex flex-col  transition-all duration-500 relative p-6 w-full">
           <img
             src={logos[index % logos.length]}
             alt={projects[index].name}

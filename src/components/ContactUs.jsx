@@ -16,7 +16,7 @@ export default function ContactUs() {
         {/* الخريطة */}
         <div className="mapContainer flex items-center justify-center w-full md:w-[45vw] md:max-w-[700px] h-[400px] md:h-[500px] relative p-4 md:p-0 overflow-hidden flex-shrink-0">
           <img
-            src="src/assets/map.webp"
+            src="../../public/assets/map.webp"
             alt="map background"
             className="mapBg hidden md:block w-full h-full object-cover absolute rounded-2xl"
           />
@@ -36,7 +36,7 @@ export default function ContactUs() {
 
         {/* الفورم */}
         <div className="formContainer w-[70%] max-[768px]:!mb-[30px] md:w-[45vw] md:max-w-[600px] md:min-h-0 md:h-[500px] flex flex-col items-center justify-start bg-white/70 backdrop-blur-sm p-4 md:p-6 md:rounded-2xl z-30 overflow-y-auto overflow-x-hidden flex-shrink-0">
-          <form className="flex flex-col gap-3 w-full md:max-w-[450px]">
+          <form className="flex flex-col gap-3 w-full md:max-w-[500px] items-center">
             <h2 className="font-bold text-black text-[24px] md:text-[28px] text-center leading-tight ">
               Ready to take your business to the next level?
             </h2>
@@ -49,28 +49,28 @@ export default function ContactUs() {
               type="text"
               placeholder="Your Name"
               required
-              className="border-[3px] border-black p-2 rounded-lg text-black h-[45px] md:h-[45px] flex-shrink-0"
+              className="border-[1px] border-black p-2 rounded-lg text-black h-[45px] md:h-[45px] flex-shrink-0 md:w-[500px]"
             />
             <input
               required
               type="email"
               placeholder="Email"
-              className="border-[3px] border-black p-2 rounded-lg text-black h-[45px] md:h-[45px] flex-shrink-0"
+              className="border-[1px] border-black p-2 rounded-lg text-black h-[45px] md:h-[45px] flex-shrink-0 md:w-[500px]"
             />
             <input
               required
               type="tel"
               placeholder="Mobile Number"
-              className="border-[3px] border-black p-2 rounded-lg text-black h-[45px] md:h-[45px] flex-shrink-0"
+              className="border-[1px] border-black p-2 rounded-lg text-black h-[45px] md:h-[45px] flex-shrink-0 md:w-[500px]"
             />
             <textarea
               required
               placeholder="Your Message"
-              className="border-[3px] border-black p-2 rounded-lg text-black h-[150px] md:h-[120px] flex-shrink-0 resize-none"
+              className="border-[1px] border-black p-2 rounded-lg text-black h-[150px] md:h-[120px] flex-shrink-0 resize-none md:w-[500px]"
             ></textarea>
             <button
               type="submit"
-              className="bg-black text-white px-[30px] py-[12px] md:py-[12px] w-full md:w-[180px] rounded-full hover:bg-gray-800 transition-all duration-300 flex-shrink-0"
+              className="bg-black text-white px-[30px] !py-[8px] md:py-[20px] w-[200px] md:w-[400px] rounded-full hover:bg-gray-800 transition-all duration-300 flex-shrink-0"
             >
               Submit
             </button>

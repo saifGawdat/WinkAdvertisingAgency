@@ -44,11 +44,25 @@
   height: 50px;
 }
 .projects {
-  background-image: url("src/assets/black-texture-projects.webp");
+  background-image: url("../../public/assets/black-texture-projects.webp");
   background-size: cover;
   z-index: -1;
 }
-#contactUs , .contactCards {
-  background-image: url("src/assets/white-texture.webp");
+#contactUs,
+.contactCards {
+  background-image: url("../../public/assets/white-texture.webp");
   background-size: cover;
+}
+input::placeholder {
+  color: #888; /* Change the color of the placeholder */
+  font-size: 12px; /* Adjust the font size */
+  opacity: 0.7; /* By default, some browsers apply opacity to placeholder text */
+  padding-left: 10px; /* Adds left padding to the input */
+}
+textarea::placeholder {
+  color: #888; /* Change the color of the placeholder */
+  font-size: 12px; /* Adjust the font size */
+  opacity: 0.7; /* By default, some browsers apply opacity to placeholder text */
+  padding-left: 10px; /* Adds left padding to the input */
+  padding-top: 10px;
 }
