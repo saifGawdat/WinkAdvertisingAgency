@@ -1,16 +1,16 @@
 import { useRef, useState } from "react";
-import { motion ,  useMotionValue, useSpring } from "motion/react";
+import { motion,  useMotionValue, useSpring } from "motion/react";
 
 const springValues = {
   damping: 30,
   stiffness: 100,
   mass: 2,
+  motion
 
 };
 
 export default function TiltedCard({
   imageSrc,
-  altText = "Tilted card image",
   captionText = "",
   containerHeight = "300px",
   containerWidth = "100%",
@@ -94,18 +94,21 @@ export default function TiltedCard({
       <motion.div
         className="relative [transform-style:preserve-3d] rounded-[20px]"
         style={{
-          backgroundColor: "black",
           overflow: "hidden",
           width: imageWidth,
           height: imageHeight,
           rotateX,
           rotateY,
           scale,
+          backgroundColor: "black",
+          backgroundImage: `url('../public/assets/black-texture-projects.webp')`, // Correct path
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        
         }}
       >
         <motion.img
           src={imageSrc}
-          alt={altText}
           className="absolute top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)]"
           style={{
             width: imageWidth,

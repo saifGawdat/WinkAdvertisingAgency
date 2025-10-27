@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 const apiUrl = import.meta.env.VITE_API_URL;
-import cardBg from "../../public/assets/black-texture-projects.webp";
 
 
 // branding images
@@ -77,10 +76,10 @@ export default function Services() {
             key={s.id}
             ref={(el) => (cardWrappersRef.current[i] = el)}
             className="md:w-full max-[768px]:w-[80%]"
+
           >
             <TiltedCard
-              className="flex text-center items-center justify-center bg-center rounded-2xl overflow-hidden shadow-lg"
-              imageSrc={cardBg}
+              className="tiltedCard flex text-center items-center justify-center bg-center rounded-2xl overflow-hidden shadow-lg"
               captionText={s.title}
               containerHeight="550px"
               containerWidth="100%"
