@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 
+
 export default function HomePage() {
   const textRef = useRef(null);
   const buttonsRef = useRef(null);
