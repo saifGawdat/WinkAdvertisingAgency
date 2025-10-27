@@ -32,7 +32,7 @@
   animation: borderGlow 3s ease-in-out infinite;
 }
 .services {
-  background-image: url("src/assets/white-texture.webp");
+  background-image: url("public/assets/white-texture.webp");
   background-size: cover;
 }
 .ligr {
@@ -44,13 +44,13 @@
   height: 50px;
 }
 .projects {
-  background-image: url("../../public/assets/black-texture-projects.webp");
+  background-image: url("public/assets/black-texture-projects.webp");
   background-size: cover;
   z-index: -1;
 }
 #contactUs,
 .contactCards {
-  background-image: url("../../public/assets/white-texture.webp");
+  background-image: url("public/assets/white-texture.webp");
   background-size: cover;
 }
 input::placeholder {
