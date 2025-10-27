@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
+import map from "../../public/assets/map.webp";
 
 export default function ContactUs() {
   return (
@@ -16,7 +17,7 @@ export default function ContactUs() {
         {/* الخريطة */}
         <div className="mapContainer flex items-center justify-center w-full md:w-[45vw] md:max-w-[700px] h-[400px] md:h-[500px] relative p-4 md:p-0 overflow-hidden flex-shrink-0">
           <img
-            src="public/assets/map.webp"
+            src={map}
             alt="map background"
             className="mapBg hidden md:block w-full h-full object-cover absolute rounded-2xl"
           />
