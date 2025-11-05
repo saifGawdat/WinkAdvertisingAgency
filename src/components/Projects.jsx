@@ -3,16 +3,15 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 const apiUrl = import.meta.env.VITE_API_URL;
 
-
 /* import your local logos */
-import logo1 from "/assets/Samir Ghoraba logo.webp";
-import logo2 from "/assets/hydraa.webp";
-import logo3 from "/assets/tap.webp";
-import logo4 from "/assets/Profit.webp";
-import logo5 from "/assets/rashat.webp";
-import logo6 from "/assets/Badawi.webp";
-import logo7 from "/assets/Priceless logo.webp";
-import logo8 from "/assets/elfaye2.webp";
+import logo1 from "../../assets/Samir Ghoraba logo.webp";
+import logo2 from "../../assets/hydraa.webp";
+import logo3 from "../../assets/tap.webp";
+import logo4 from "../../assets/Profit.webp";
+import logo5 from "../../assets/rashat.webp";
+import logo6 from "../../assets/Badawi.webp";
+import logo7 from "../../assets/Priceless logo.webp";
+import logo8 from "../../assets/elfaye2.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
