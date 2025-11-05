@@ -1,6 +1,6 @@
 import { useState } from "react";
 import AboutUs from "./AboutUs";
-import logoImg from "../../public/assets/white logo cropped2.png"
+import logoImg from "/assets/white logo cropped2.png"
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
@@ -19,7 +19,7 @@ export default function Nav() {
         <ul
           className={`flex flex-row gap-[100px] ${
             isMenuOpen
-              ? "max-[1050px]:flex max-[1050px]:fixed max-[1050px]:inset-0 max-[1050px]:w-screen max-[1050px]:h-screen max-[1050px]:bg-black max-[1050px]:text-white max-[1050px]:justify-center max-[1050px]:items-center max-[1050px]:z-50 max-[1050px]:flex-col max-[1050px]:gap-6"
+              ? "max-[1050px]:flex max-[1050px]:fixed max-[1050px]:inset-0 max-[1050px]:w-screen max-[1050px]:h-screen max-[1050px]:bg-black max-[1050px]:text-white max-[1050px]:justify-center max-[1050px]:items-center max-[1050px]:z-5550 max-[1050px]:flex-col max-[1050px]:gap-6"
               : "max-[1050px]:hidden"
           }`}
         >
@@ -42,7 +42,7 @@ export default function Nav() {
         <button
           type="button"
           className={`items-center justify-center text-white hidden max-[1050px]:inline-flex ${
-            isMenuOpen ? "fixed top-4 right-4 z-[60]" : ""
+            isMenuOpen ? "fixed top-4 right-4 z-[600]" : ""
           }`}
           aria-label="Toggle menu"
           aria-expanded={isMenuOpen}

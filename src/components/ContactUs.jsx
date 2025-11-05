@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-import map from "../../public/assets/map.webp";
+import map from "/assets/map.webp";
 
 export default function ContactUs() {
   return (

@@ -2,8 +2,8 @@ import LiquidEther from "../reactBitsComponents/LiquidEther";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import founder1 from "../../public/cards/1.webp"
-import founder2 from "../../public/cards/2.webp"
+import founder1 from "/cards/1.webp"
+import founder2 from "/cards/2.webp"
 
 gsap.registerPlugin(ScrollTrigger);
 

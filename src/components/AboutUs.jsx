@@ -1,6 +1,6 @@
 import "../App.css";
 import LiquidEther from "../reactBitsComponents/LiquidEther.jsx";
-import cap from "../../public/assets/cap.webp";
+import cap from "/assets/cap.webp";
 import { useEffect, useRef, useState } from "react"; // Add useState
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -49,7 +49,7 @@ export default function AboutUs() {
   return (
     <section
       id="aboutUs"
-      className="relative w-screen h-screen bg-black shadow-2xl flex items-center justify-center overflow-visible !mt-[220px] max-[1050px]:!mt-[180px] max-[430px]:!mt-[30px]"
+      className="relative w-screen h-screen bg-black shadow-2xl flex items-center justify-center overflow-visible"
     >
       <div className="ligrRiverse"></div>
       <LiquidEther

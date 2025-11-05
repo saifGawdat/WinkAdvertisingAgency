@@ -7,21 +7,31 @@ export default function ContactCards() {
               <i className="fa-solid fa-envelope"></i>
             </div>{" "}
             <h4 className="text-xl font-bold max-[768px]:text-[15px]">Email</h4>
-            <p className="font-semibold text-lg max-[768px]:text-[15px]">winkadv.agency@gmail.com</p>
+            <p className="font-semibold text-lg max-[768px]:text-[15px]">
+              winkadv.agency@gmail.com
+            </p>
           </div>
           <div className="card bg-black w-[300px] h-[300px]  text-white rounded-[30px] p-[40px]  flex flex-col items-center justify-center gap-2 max-[768px]:w-[250px] max-[768px]:h-[700px]">
             <div className="flex items-center justify-center text-[40px] text-black bg-white rounded-full w-[80px] h-[80px] max-[768px]:text-[20px] max-[768px]:w-[40px] max-[768px]:h-[40px]">
               <i className="fa-solid fa-phone"></i>
             </div>{" "}
-            <h4 className="text-xl font-bold max-[768px]:text-[15px]">Phones</h4>
-            <p className="font-semibold text-lg max-[768px]:text-[15px]">(+20) 114 633 9518</p>
-            <p className="font-semibold text-lg max-[768px]:text-[15px]">(+20) 109 895 5668</p>
+            <h4 className="text-xl font-bold max-[768px]:text-[15px]">
+              Phones
+            </h4>
+            <p className="font-semibold text-lg max-[768px]:text-[15px]">
+              (+20) 114 633 9518
+            </p>
+            <p className="font-semibold text-lg max-[768px]:text-[15px]">
+              (+20) 109 895 5668
+            </p>
           </div>
           <div className="card bg-black w-[300px] h-[300px] text-white rounded-[30px] p-[40px]  flex flex-col items-center justify-center gap-2 max-[768px]:w-[250px] max-[768px]:!h-[700px]">
             <div className="flex items-center justify-center text-[40px] text-black bg-white rounded-full w-[80px] h-[80px] max-[768px]:text-[20px] max-[768px]:w-[40px] max-[768px]:h-[40px]">
               <i className="fa-solid fa-location-dot"></i>
-            </div>{" "} 
-            <h4 className="text-xl font-bold max-[768px]:text-[15px]">Address</h4>
+            </div>{" "}
+            <h4 className="text-xl font-bold max-[768px]:text-[15px]">
+              Address
+            </h4>
             <p className="font-semibold text-lg text-center max-[768px]:text-[15px]">
               Egypt - Tanta, Tout Ankh Amoun St with Elmoayed St, Building 22
             </p>
@@ -60,6 +70,7 @@ export default function ContactCards() {
           </div>{" "}
         </div>
         All Rights Reserved © 2025 Wink Advertising Agency.
+        <div className="w-screen ligrReverse"></div>
       </div>
     );
 }

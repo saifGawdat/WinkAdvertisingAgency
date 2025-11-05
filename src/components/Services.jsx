@@ -6,12 +6,12 @@ const apiUrl = import.meta.env.VITE_API_URL;
 
 
 // branding images
-import branding1 from "../../public/assets/branding.webp";
-import branding2 from "../../public/assets/coding.webp";
-import branding3 from "../../public/assets/motion-graphics.webp";
-import branding4 from "../../public/assets/video-camera.webp";
-import branding5 from "../../public/assets/ads.webp";
-import branding6 from "../../public/assets/printer.webp";
+import branding1 from "/assets/branding.webp";
+import branding2 from "/assets/coding.webp";
+import branding3 from "/assets/motion-graphics.webp";
+import branding4 from "/assets/video-camera.webp";
+import branding5 from "/assets/ads.webp";
+import branding6 from "/assets/printer.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,6 +66,8 @@ export default function Services() {
       id="services"
       className="services w-screen min-h-screen flex flex-col items-center justify-center bg-white px-4  "
     >
+      <div className="w-screen ligr"></div>
+
       <h2 className="text-black text-center font-bold text-[36px] sm:text-[48px] mb-10">
         Our Services
       </h2>
@@ -76,7 +78,6 @@ export default function Services() {
             key={s.id}
             ref={(el) => (cardWrappersRef.current[i] = el)}
             className="md:w-full max-[768px]:w-[80%]"
-
           >
             <TiltedCard
               className="tiltedCard flex text-center items-center justify-center bg-center rounded-2xl overflow-hidden shadow-lg"
