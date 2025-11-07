@@ -6,10 +6,10 @@ export default function TextHomePage() {
       </h2>
       <div className="flex flex-col md:flex-row gap-2.5 mt-5! md:mt-0!">
         <button className="bg-black text-white px-23! py-3! rounded-[30px] hover:bg-white hover:text-black hover:border-black hover:border-2 cursor-pointer transition-all duration-300">
-          Let&apos;s Begin
+          <a href="#contactUs">Let&apos;s Begin</a>
         </button>
         <button className="bg-white text-black px-22! py-3! rounded-[30px] hover:bg-black hover:text-white hover:border-black hover:border-2 cursor-pointer transition-all duration-300 border-black border">
-          See Our Work
+          <a href="#projects">See Our Work</a>
         </button>
       </div>
     </div>

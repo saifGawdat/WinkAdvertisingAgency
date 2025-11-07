@@ -148,7 +148,7 @@ export default function Projects() {
 
       <button className="border-white border-2 bg-black text-white !py-[12px] !px-[25px] !w-[250px] rounded-[30px] hover:bg-white hover:text-black hover:border-black hover:border-[2px] cursor-pointer transition-all duration-300 !mt-[20px]">
         <a
-          href="https://drive.google.com/file/d/1XBKvNcfjyLKxPo6SN_-GB_rE40CLsZrB/view?usp=sharing"
+          href="https://drive.google.com/drive/folders/1OI7eF8IxjmzOrfJIM456BQ2jgNN0lEQB"
           target="_blank"
           rel="noopener noreferrer"
         >
