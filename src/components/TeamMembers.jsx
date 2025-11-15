@@ -84,7 +84,10 @@ export default function TeamMembers() {
           );
         })
       )}
-      <div className="w-screen ligr"></div>
+        <h3 className="z-1000 font-bold text-white text-xl text-center"> All Rights Reserved © 2025 Wink Advertising Agency.</h3>
+      <div className="w-screen ligr "  >
+        {" "}
+      </div>
     </div>
   );
 }

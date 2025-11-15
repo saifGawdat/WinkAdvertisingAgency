@@ -8,7 +8,7 @@ export default function ContactCards() {
             </div>{" "}
             <h4 className="text-xl font-bold max-[768px]:text-[15px]">Email</h4>
             <p className="font-semibold text-lg max-[768px]:text-[15px]">
-              winkadv.agency@gmail.com
+              info@winkadvertising.net
             </p>
           </div>
           <div className="card bg-black w-[300px] h-[300px]  text-white rounded-[30px] p-[40px]  flex flex-col items-center justify-center gap-2 max-[768px]:w-[250px] max-[768px]:h-[700px]">
@@ -69,7 +69,6 @@ export default function ContactCards() {
             </a>
           </div>{" "}
         </div>
-        All Rights Reserved © 2025 Wink Advertising Agency.
         <div className="w-screen ligrReverse"></div>
       </div>
     );

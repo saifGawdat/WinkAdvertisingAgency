@@ -1,7 +1,7 @@
 export default function TextHomePage() {
   return (
     <div className="flex flex-col items-center justify-center w-full">
-      <h2 className="font-bold text-[42px] text-center mb-4 md:text-[68px]">
+      <h2 className="font-bold text-[42px] text-center mb-4 md:text-[68px] homeText">
         WE KNOW <br /> WHAT YOU WANT
       </h2>
       <div className="flex flex-col md:flex-row gap-2.5 mt-5! md:mt-0!">

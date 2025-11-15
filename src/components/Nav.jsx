@@ -42,7 +42,7 @@ export default function Nav() {
         <button
           type="button"
           className={`items-center justify-center text-white hidden max-[1050px]:inline-flex ${
-            isMenuOpen ? "fixed top-4 right-4 z-[600]" : ""
+            isMenuOpen ? "fixed top-4 right-4 z-[600000]" : ""
           }`}
           aria-label="Toggle menu"
           aria-expanded={isMenuOpen}

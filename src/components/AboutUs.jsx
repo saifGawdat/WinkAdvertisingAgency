@@ -75,11 +75,11 @@ export default function AboutUs() {
         ref={capRef}
         src={cap}
         alt="cap"
-        className="absolute top-0 left-[5%] w-[20%] h-[80%] z-[9]"
+        className="absolute top-0 left-[5%] w-[30%] h-[60%] z-[9]"
       />
 
       <div className="absolute inset-0 flex items-center justify-center flex-col">
-        <h2 className="text-white font-bold text-5xl !mb-[50px] text-center !overflow-hidden absolute top-[20px] ">
+        <h2 className="text-white font-bold text-5xl !mb-[50px] text-center !overflow-hidden absolute top-[20px] z-10 ">
           About Us
         </h2>
         <div className="relative z-[100] w-[90%] max-w-[800px] mx-auto">
