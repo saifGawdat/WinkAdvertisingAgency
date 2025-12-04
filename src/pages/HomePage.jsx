@@ -17,6 +17,7 @@ export default function HomePage() {
           <TextHomePage />
         </div>
       </div>
+      
     </div>
   );
 }

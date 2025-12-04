@@ -1,9 +1,35 @@
+import { useState, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import emailjs from "@emailjs/browser";
 gsap.registerPlugin(ScrollTrigger);
 import map from "/assets/map.webp";
 
 export default function ContactUs() {
+  const formRef = useRef();
+  const [status, setStatus] = useState(""); // "", "sending", "success", "error"
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    // Replace these with your EmailJS credentials from https://www.emailjs.com/
+    const SERVICE_ID = "YOUR_SERVICE_ID";
+    const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+    const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+      .then(() => {
+        setStatus("success");
+        formRef.current.reset();
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        setStatus("error");
+      });
+  };
+
   return (
     <section
       id="contactUs"
@@ -37,7 +63,11 @@ export default function ContactUs() {
 
         {/* الفورم */}
         <div className="formContainer w-[70%] max-[768px]:!mb-[30px] md:w-[45vw] md:max-w-[600px] md:min-h-0 md:h-[500px] flex flex-col items-center justify-start bg-white/70 backdrop-blur-sm p-4 md:p-6 md:rounded-2xl z-30 overflow-y-auto overflow-x-hidden flex-shrink-0">
-          <form className="flex flex-col gap-3 w-full md:max-w-[500px] items-center">
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-3 w-full md:max-w-[500px] items-center"
+          >
             <h2 className="font-bold text-black text-[24px] md:text-[28px] text-center leading-tight ">
               Ready to take your business to the next level?
             </h2>
@@ -48,6 +78,7 @@ export default function ContactUs() {
             </p>
             <input
               type="text"
+              name="from_name"
               placeholder="Your Name"
               required
               className="border-[1px] border-black p-2 rounded-lg text-black h-[45px] md:h-[45px] flex-shrink-0 md:w-[500px]"
@@ -55,26 +86,40 @@ export default function ContactUs() {
             <input
               required
               type="email"
+              name="from_email"
               placeholder="Email"
               className="border-[1px] border-black p-2 rounded-lg text-black h-[45px] md:h-[45px] flex-shrink-0 md:w-[500px]"
             />
             <input
               required
               type="tel"
+              name="phone"
               placeholder="Mobile Number"
               className="border-[1px] border-black p-2 rounded-lg text-black h-[45px] md:h-[45px] flex-shrink-0 md:w-[500px]"
             />
             <textarea
               required
+              name="message"
               placeholder="Your Message"
               className="border-[1px] border-black p-2 rounded-lg text-black h-[150px] md:h-[120px] flex-shrink-0 resize-none md:w-[500px]"
             ></textarea>
             <button
               type="submit"
+              disabled={status === "sending"}
               className="bg-black text-white px-[30px] !py-[8px] md:py-[20px] w-[200px] md:w-[400px] rounded-full hover:bg-gray-800 transition-all duration-300 flex-shrink-0"
             >
-              Submit
+              {status === "sending" ? "Sending..." : "Submit"}
             </button>
+            {status === "success" && (
+              <p className="text-green-600 font-semibold text-center">
+                ✓ Message sent successfully!
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-red-600 font-semibold text-center">
+                ✗ Failed to send. Please try again.
+              </p>
+            )}
           </form>
         </div>
       </div>

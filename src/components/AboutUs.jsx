@@ -51,31 +51,12 @@ export default function AboutUs() {
       id="aboutUs"
       className="relative w-screen h-screen bg-black shadow-2xl flex items-center justify-center overflow-visible"
     >
-      <div className="ligrRiverse"></div>
-      <LiquidEther
-        colors={["#6c757d", "#6c757d", "#6c757d"]}
-        mouseForce={20}
-        cursorSize={100}
-        isViscous={false}
-        enableMouse={true}
-        viscous={30}
-        iterationsViscous={32}
-        iterationsPoisson={32}
-        resolution={0.2}
-        isBounce={false}
-        autoDemo={true}
-        autoSpeed={0.2}
-        autoIntensity={1.2}
-        takeoverDuration={0.25}
-        autoResumeDelay={200}
-        autoRampDuration={0.6}
-      />
 
       <img
         ref={capRef}
         src={cap}
         alt="cap"
-        className="absolute top-0 left-[5%] w-[30%] h-[60%] z-[9]"
+        className="absolute top-0 left-[5%] w-[20%] h-[60%] z-[9]"
       />
 
       <div className="absolute inset-0 flex items-center justify-center flex-col">

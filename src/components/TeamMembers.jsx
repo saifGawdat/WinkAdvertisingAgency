@@ -40,8 +40,35 @@ export default function TeamMembers() {
     });
   }, [team]);
 
-  const images = Array.from({ length: 39 }, (_, i) => `/cards/${i + 1}.webp`);
-  const visibleTeam = team.slice(2);
+  // Custom job title order for sorting team members
+  const jobTitleOrder = [
+    "Team Leader, Quality Control",
+    "HR Generalist",
+    "Media Buyer",
+    "Content Creator",
+    "Quality Control",
+    "Team Leader, Graphic Designer",
+    "Graphic Designer",
+    "Videographer",
+    "Social Media Specialist",
+    "Content Creator",
+    "Video Editor",
+    "Team Leader, Moderation",
+    "Moderation",
+    "Financial Manager",
+  ];
+
+  // Sort team members by the predefined job title order
+  const sortedTeam = [...team].sort((a, b) => {
+    const indexA = jobTitleOrder.indexOf(a.jobTitle);
+    const indexB = jobTitleOrder.indexOf(b.jobTitle);
+    // If job title not found in order array, place at the end
+    const orderA = indexA === -1 ? jobTitleOrder.length : indexA;
+    const orderB = indexB === -1 ? jobTitleOrder.length : indexB;
+    return orderA - orderB;
+  });
+
+  const visibleTeam = sortedTeam.slice(0);
 
   return (
     <div
@@ -53,41 +80,29 @@ export default function TeamMembers() {
       ) : visibleTeam.length === 0 ? (
         <p className="text-center text-white">No members to display.</p>
       ) : (
-        visibleTeam.map((member, idx) => {
-          const originalIdx = idx + 2;
-          const memberSrc =
-            member.imagePath &&
-            (member.imagePath.startsWith("/") ||
-              member.imagePath.startsWith("http"))
-              ? member.imagePath
-              : null;
-
-          const imgSrc = memberSrc || images[originalIdx % images.length];
-
-          return (
-            <div
-              key={`${member.name || "member"}-${originalIdx}`}
-              className="team-card text-center flex flex-col items-center justify-center gap-[5px] w-[45%] sm:w-auto "
-            >
-              <img
-                src={imgSrc}
-                alt={member.name || `member-${originalIdx}`}
-                className="w-[350px] h-[350px] max-[700px]:h-[200px] object-fit rounded-[40px] "
-              />
-              <h3 className="text-[20px] font-bold leading-tight text-white max-[700px]:text-[12px] ">
-                {member.name}
-              </h3>
-              <p className="text-gray-500 text-[15px] max-[700px]:text-[12px]">
-                {member.jobTitle}
-              </p>
-            </div>
-          );
-        })
+        visibleTeam.map((member, idx) => (
+          <div
+            key={`${member.name || "member"}-${idx}`}
+            className="team-card text-center flex flex-col items-center justify-center gap-[5px] w-[45%] sm:w-auto "
+          >
+            <img
+              src={member.imagePath}
+              alt={member.name || `member-${idx}`}
+              className="w-[350px] h-[350px] max-[700px]:h-[200px] object-fit rounded-[40px] "
+            />
+            <h3 className="text-[20px] font-bold leading-tight text-white max-[700px]:text-[12px] ">
+              {member.name}
+            </h3>
+            <p className="text-gray-500 text-[15px] max-[700px]:text-[12px]">
+              {member.jobTitle}
+            </p>
+          </div>
+        ))
       )}
-        <h3 className="z-1000 font-bold text-white text-xl text-center"> All Rights Reserved © 2025 Wink Advertising Agency.</h3>
-      <div className="w-screen ligr "  >
+      <h3 className="z-1000 font-bold text-white text-xl text-center">
         {" "}
-      </div>
+        All Rights Reserved © 2025 Wink Advertising Agency.
+      </h3>
     </div>
   );
 }
