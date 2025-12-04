@@ -103,6 +103,7 @@ export default function TeamMembers() {
         {" "}
         All Rights Reserved © 2025 Wink Advertising Agency.
       </h3>
+      <div className="w-screen ligr "> </div>
     </div>
   );
 }
